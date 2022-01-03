@@ -58,7 +58,6 @@
     "@types/babel__core": "^7.1.18",
     "@types/bson": "^4.2.0",
     "@types/lodash": "^4.14.178",
-    "@types/mongoose": "^5.11.97",
     "@types/node": "^17.0.7"
   },
   "engines": {
