@@ -1,0 +1,63 @@
+{
+  "name": "nirvanats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist",
+  "scripts": {
+    "start": "concurrently \"npm run java\" \"wait-on 2333 && node dist\"",
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
+    "java": "node lavalink.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HestiaN/Nirvana-TS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HestiaN/Nirvana-TS/issues"
+  },
+  "homepage": "https://github.com/HestiaN/Nirvana-TS#readme",
+  "dependencies": {
+    "@types/moment": "^2.13.0",
+    "@types/moment-duration-format": "^2.2.3",
+    "@types/ms": "^0.7.31",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "ascii-table": "^0.0.9",
+    "canvas": "^2.8.0",
+    "chalk": "^4.1.1",
+    "concurrently": "^7.0.0",
+    "discord.js": "^13.0.0-dev.4206e35.1626393827",
+    "discordjs-activity": "^1.2.0",
+    "dotenv": "^10.0.0",
+    "erela.js": "^2.3.3",
+    "erela.js-filters": "^1.2.2",
+    "erela.js-spotify": "^1.2.0",
+    "eslint": "^7.30.0",
+    "eslint-plugin-import": "^2.23.4",
+    "lodash": "^4.17.21",
+    "lyrics-finder": "^21.7.0",
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2",
+    "mongoose": "github:sfvii/mongoose",
+    "ms": "^2.1.2",
+    "node-abort-controller": "^3.0.0",
+    "pretty-ms": "^7.0.1",
+    "progress": "^2.0.3",
+    "soundcloud-scraper": "^5.0.0",
+    "string-progressbar": "^1.0.4",
+    "ts-node": "^10.0.0",
+    "ts-node-dev": "^1.1.8",
+    "undici": "^4.3.1",
+    "wait-on": "^6.0.0",
+    "ytdl-core": "^4.9.0"
+  },
+  "devDependencies": {
+    "@types/babel__core": "^7.1.14",
+    "@types/lodash": "^4.14.171",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^14.17.4"
+  }
+}
