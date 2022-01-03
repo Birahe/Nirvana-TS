@@ -2,8 +2,7 @@ import { Manager } from "erela.js";
 import { Event } from "./../Interfaces/Event";
 import chalk from "chalk";
 import { config } from "./../Config/index";
-import { Command } from "../Interfaces/Command";
-import logSchema from "../Models/ModlogSchema";
+import { Command } from "../Interfaces/Command"
 import {
   Client,
   Collection,
@@ -84,7 +83,7 @@ class NirvanaClient extends Client {
   public async getPrefix(message: Message) {
     const data = await prefixSchema.findOne({ guild: message.guild?.id });
     return data ? data.prefix : this.config.prefix;
-  } 
+  }
   public async registerSlashCommands() {
     this.guilds.cache.forEach((guild) => {
       try {

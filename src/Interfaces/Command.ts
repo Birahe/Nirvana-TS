@@ -5,6 +5,8 @@ import {
   CommandInteractionOption,
   Message,
   Collection,
+  CommandInteractionOptionResolver,
+  CacheType,
 } from "discord.js";
 
 interface Run {
@@ -20,7 +22,7 @@ interface SlashRun {
   (
     client: Client,
     interaction: CommandInteraction,
-    args: Collection<string, CommandInteractionOption>
+    args: Omit<CommandInteractionOptionResolver<CacheType>, 'getMessage' | 'getFocused'>
   ): Promise<unknown>;
 }
 

@@ -8,8 +8,6 @@ const client = new Client({
   restTimeOffset: 10,
   partials: ["CHANNEL", "GUILD_MEMBER", "MESSAGE", "REACTION", "USER"],
 });
-import { load } from "./Log";
-load(client);
 import Erela from "./Erela";
 Erela(client);
 client.setMaxListeners(1000);
