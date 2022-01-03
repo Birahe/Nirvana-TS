@@ -12,7 +12,7 @@ export const event: Event = {
       chalk.yellow(`Bot ${chalk.red(client.user!.tag)} adı ile giriş yaptı.`)
     );
     connect(
-      "mongodb+srv://HestiaN:15262326@nirvana.nkfqk.mongodb.net/Nirvana",
+      client.config.mongo_url,
       {
         useCreateIndex: true,
         useNewUrlParser: true,

@@ -7,4 +7,5 @@ export const config: Config = {
   owner: process.env.OWNER!,
   spotify_id: process.env.SPOTIFY_ID!,
   spotify_secret: process.env.SPOTIFY_SECRET!,
+  mongo_url: process.env.MONGO_URL!
 };

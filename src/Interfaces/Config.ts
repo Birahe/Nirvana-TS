@@ -4,4 +4,5 @@ export interface Config {
   owner: string;
   spotify_id: string;
   spotify_secret: string;
+  mongo_url: string;
 }
