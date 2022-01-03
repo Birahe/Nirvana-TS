@@ -1,5 +1,14 @@
 # Nirvana TypeScript
 
+## Botu Kullanmak İçin Ayarlamanız Gereken .env Özellikleri
+
+- TOKEN: Discord Bot Token,
+- PREFIX: Discord Bot Prefix,
+- OWNER: Discord Bot Sahip ID'si,
+- SPOTIFY_ID: Spotify ID'si,
+- SPOTIFY_SECRET: Spotify Secret'ı,
+- MONGO_URL: MongoDB Url
+
 ### Çok Amaçlı Nirvana Botunun Kodlarıdır.
 
 - [Bot Hakkında Bilgiler](#bilgiler)
