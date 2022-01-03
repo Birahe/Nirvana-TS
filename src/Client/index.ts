@@ -13,7 +13,7 @@ import {
 import { Config } from "../Interfaces/Config";
 import path from "path";
 import { readdirSync } from "fs";
-const AsciiTable = require("ascii-table");
+import AsciiTable from 'ascii-table'
 import prefixSchema from "../Models/PrefixSchema";
 
 declare module "discord.js" {
