@@ -9,7 +9,6 @@ import {
   Message,
   MessageEmbed,
   Permissions,
-  Snowflake,
 } from "discord.js";
 import { Config } from "../Interfaces/Config";
 import path from "path";
