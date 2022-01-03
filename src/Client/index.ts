@@ -15,11 +15,6 @@ import path from "path";
 import { readdirSync } from "fs";
 import prefixSchema from "../Models/PrefixSchema";
 
-async function importAsciiTable() {
-  var AsciiTable = await import('ascii-table')
-}
-
-importAsciiTable()
 
 declare module "discord.js" {
   interface Client {
@@ -40,28 +35,24 @@ class NirvanaClient extends Client {
   }
 
   private loadCommands() {
-    const table = new AsciiTable("Komut Tablosu").setHeading("Dosya", "Durum");
     const Path = path.join(__dirname, "..", "Commands");
     readdirSync(Path).forEach((dir) => {
       const commandFiles = readdirSync(path.join(Path, dir));
       for (const file of commandFiles) {
         const { command } = require(`${Path}/${dir}/${file}`);
         const cmd = command as Command;
-        table.addRow(file, "✔");
         this.commands.set(cmd.name, cmd);
         cmd.aliases?.forEach((alias) => {
           this.aliases.set(alias, cmd);
         });
       }
     });
-    console.log(chalk.magenta(table.toString()));
     console.log(
       chalk.bold.yellow(`${chalk.red(this.commands.size)} komut yüklendi!`)
     );
   }
 
   private loadEvents() {
-    const table = new AsciiTable("Event Tablosu").setHeading("Dosya", "Durum");
     const Path = path.join(__dirname, "..", "Events");
     const events = readdirSync(Path);
     for (const file of events) {
@@ -69,9 +60,7 @@ class NirvanaClient extends Client {
       this.on((event as Event).name, (...args) =>
         (event as Event).run(this, ...args)
       );
-      table.addRow(file, "✔");
     }
-    console.log(chalk.cyan(table.toLocaleString()));
   }
   public elevation(message: Message) {
     let permLvl = 0;
