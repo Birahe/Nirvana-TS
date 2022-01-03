@@ -5,7 +5,6 @@
   "main": "dist",
   "scripts": {
     "start": "concurrently \"npm run java\" \"wait-on 2333 && node dist\"",
-    "build": "tsc",
     "dev": "ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
     "java": "node lavalink.js"
   },
@@ -22,6 +21,7 @@
   "dependencies": {
     "@types/moment": "^2.13.0",
     "@types/moment-duration-format": "^2.2.3",
+    "@types/mongoose": "^5.11.97",
     "@types/ms": "^0.7.31",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.9.0",
@@ -41,7 +41,7 @@
     "lyrics-finder": "^21.7.0",
     "moment": "^2.29.1",
     "moment-duration-format": "^2.3.2",
-    "mongoose": "^6.1.4",
+    "mongoose": "^5.13.14",
     "ms": "^2.1.3",
     "node-abort-controller": "^3.0.1",
     "pretty-ms": "^7.0.1",
