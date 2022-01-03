@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist",
   "scripts": {
-    "start": "concurrently \"npm run java\" \"wait-on 2333 && node dist\"",
+    "start": "concurrently \"npm run java\" \"wait-on tcp:2333 && node dist\"",
     "dev": "ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
     "java": "node lavalink.js"
   },
