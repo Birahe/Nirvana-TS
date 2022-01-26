@@ -9,9 +9,9 @@ export default function (client: Client) {
   client.manager = new Manager({
     nodes: [
       {
-        host: "localhost",
-        identifier: "Local",
-        port: 2333,
+        host: "https://handas-lavalink.herokuapp.com",
+        identifier: "Heroku",
+        port: 80,
         password: "youshallnotpass",
       },
     ],
