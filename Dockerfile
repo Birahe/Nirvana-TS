@@ -1,5 +1,7 @@
 FROM node:alpine
 
+RUN apk update && apk add python make g++
+
 WORKDIR /app/src/app
 
 COPY package*.json .
