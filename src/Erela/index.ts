@@ -9,7 +9,7 @@ export default function (client: Client) {
   client.manager = new Manager({
     nodes: [
       {
-        host: "192.168.1.107",
+        host: "lavalink",
         identifier: "Home Server",
         port: 2333,
         password: "youshallnotpass",

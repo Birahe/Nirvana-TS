@@ -1,15 +1,16 @@
-FROM node:alpine
+FROM node:latest
 
-RUN apk update && apk add python3 make g++ py3-pip
+# Create the directory!
+RUN mkdir -p /usr/src/bot
+WORKDIR /usr/src/bot
 
-WORKDIR /app/src/app
-
-COPY package*.json .
-
-COPY . .
-
+# Copy and Install our bot
+COPY package.json /usr/src/bot
 RUN npm install
+
+# Our precious bot
+COPY . /usr/src/bot
 
 RUN npm run build
 
-CMD ["npm", "start"]
+CMD ["node", "dist"]
