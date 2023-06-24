@@ -1,6 +1,6 @@
 FROM node:alpine
 
-RUN apk update && apk add python make g++
+RUN apk update && apk add python3 make g++
 
 WORKDIR /app/src/app
 
